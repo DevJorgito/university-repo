@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>CSS3 Custom Properties</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+        <link href="temas.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <button class="tema">Cambiar Tema</button>
+        
+        <h2>Qué es CSS3?</h2>
+
+        <div>
+            Las Hojas de Estilo en Casdada (Cascading Style Sheets CSS) 
+            nivel 3 es la iteración del estándar CSS utilizado para dar 
+            estilo y formato a las páginas Web. CSS3 incorpora el estándar 
+            CSS2 con cambios y mejoras. Un cambio clave es la división 
+            del estándar en módulos separados, lo que hace más sencillo 
+            aprenderlo y comprenderlo.
+        </div>
+        <br/>
+        <a href="#">Leer más de CSS3</a>
+        <br/>
+        <br/>
+        <input type="email" placeholder="nombre@empresa.com">
+
+    </body>
+
+    <script>
+        /*
+            Escuchamos el evento clic en el botón para cambiar
+            el tema a modo oscuro y viceversa.
+        */
+        const btn = document.querySelector(".tema");
+        btn.addEventListener("click", function() {
+            document.body.classList.toggle("oscuro");
+        });
+    </script>
+</html>

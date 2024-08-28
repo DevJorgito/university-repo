@@ -1,0 +1,30 @@
+.container{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 120px 480px 40px;
+    grid-template-areas:
+        "panel cabecera cabecera cabecera"
+        "panel contenido contenido contenido"
+        "panel pie pie pie"
+}
+
+
+.item {
+    width: 100%;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+}
+
+
+.item-a{
+    grid-area : cabecera;
+}
+.item-b{
+    grid-area : contenido;
+}
+.item-c{
+    grid-area : panel;
+}
+.item-d{
+    grid-area : pie;
+}

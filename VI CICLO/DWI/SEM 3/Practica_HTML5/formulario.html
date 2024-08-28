@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>HTML5 Formulario</title>
+        <meta charset="utf-8">
+        <link href="formulario.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <h2>Formulario</h2>
+
+        <form>
+            <table>
+                <tr>
+                    <th colspan="2">Registro de postulante</th>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td>
+                     <input type="text" 
+                     placeholder="Ingrese nombre"
+                     name="nombre"
+                     required autofocus autocomplete="on">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Género:</td>
+                    <td>
+                       <input type="radio"
+                       name="genero"
+                       required>Masculino
+                       <input type="radio"
+                       name="genero"
+                       required>Femenino
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Edad:</td>
+                    <td>
+                      <input type="number"
+                      placeholder="Edad18-85()"
+                      min="18"
+                      max="85"
+                      required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salario deseado:</td>
+                    <td>
+                      2500<input type="range"
+                      min="2500"
+                      max="4000"
+                      step="100">4000
+                    </td>
+                </tr>
+                <tr>
+                    <td>Correo:</td>
+                    <td>
+                       <input type="email"
+                       placeholder="Ingrese correo"
+                       required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DNI:</td>
+                    <td>
+                        <input type="text" 
+                        placeholder="Ingrese DNI"
+                        pattern="^[0-9]{8}$" title="DNI no válido">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sitio Web:</td>
+                    <td>
+                        <input type="url"
+                        placeholder="Ingrese URL de su sitio web"
+                        required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de entrevista</td>
+                    <td>
+                        <input type="date" 
+                        min="2022-05-01"
+                        max="2022-05-31"
+                        required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de entrevista</td>
+                    <td>
+                        <input type="time"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Color preferido</td>
+                    <td>
+                       <input type="color">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Enviar"></td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>

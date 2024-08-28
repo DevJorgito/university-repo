@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>HTML5 Drag & Drop</title>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+            #dropbox {
+                width : 150px;
+                height: 150px;
+                border: 3px dashed #d3d3d3;
+                background: #FCFBE3;
+                margin: 5px;
+            }
+
+            #dragimg {
+                margin: 5px;
+                width: 130px;
+                height: 130px;
+            }
+        </style>
+
+        <script>
+            function dragStart(e){
+                e.dataTransfer.effectAllowed = "move";
+                e.dataTransfer.setData("Text", e.target.getAttribute("id"));
+            }
+
+            function dragOver(e){
+                e.preventDefault();
+                return false;
+            }
+
+            function drop(e){
+                e.preventDefault();
+                var data = e.dataTransfer.getData("Text");
+                e.target.appendChild(document.getElementById(data));
+            }
+        </script>
+        
+        
+    </head>
+
+    <body>
+        <h2>Drag & Drop</h2>
+        <span>Arrastra la imagen dentro del recuadro</span>
+        <div id="dropbox"
+            ondragover="dragOver(event);" 
+            ondrop="drop(event);"    
+        >
+        </div>
+        <img src="recursos/imagenes/laptop.png" 
+        id="dragimg"
+        draggable="true"
+        ondragstart="dragStart(event);">
+    </body>
+</html>
